@@ -2,8 +2,12 @@
 </script>
 <template>
   <main>
-    <section>
-        <p>Ola mundo Nuxt 3</p>
+    <!-- Blog Section Starts -->
+    <section class="blogs">
+      <div class="grid sm:grid-cols-3 gap-10">
+        Hello world 2
+      </div>
     </section>
   </main>
 </template>
+
