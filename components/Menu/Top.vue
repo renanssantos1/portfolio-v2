@@ -18,7 +18,7 @@
         <ul class="flex items-center gap-5">
           <li><a title="Blog" href="/blog" class="nav-link">Blog</a></li>
           <li><a title="Projetos" href="/portfolio" class="nav-link">Projetos</a></li>
-          <li><a title="Contato" href="/contact" class="nav-link">Fale Comigo</a></li>
+          <li><a title="Contato" href="/contact" class="nav-link">Contato</a></li>
           <li class="leading-none">
             <button type="button" class="relative group">
               <div>
