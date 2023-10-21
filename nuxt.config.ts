@@ -15,4 +15,5 @@ export default defineNuxtConfig({
       wpUri: process.env.WP_URI,
     },
   },
+  
 });
