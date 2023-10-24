@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  image: string;
+  image?: string;
   title: string;
   description?: string;
   slug: string;
