@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <div class="col-span-1 shadow-lg">
     <!-- Blog image -->
-    <div class="grid__image h-[180px] w-full relative overflow-hidden">
+    <div class="h-[180px] w-full relative overflow-hidden">
       <img
         v-if="image"
         class="w-full h-full absolute object-cover"
@@ -25,7 +25,7 @@ defineProps<{
       <p v-if="excerpt" class="text-sm mb-3">{{ excerpt }}</p>
       <nuxt-link
         class="border-b-2 border-primary-500 inline-flex items-center"
-        :to="`/${slug}`"
+        :to="`/blog/${slug}`"
         >Leia mais
         <svg
           xmlns="http://www.w3.org/2000/svg"

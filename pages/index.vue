@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 </script>
 <template>
-  <section class="blogs">
-    <div class="hero bg-gray-100 py-10">
+  <section class="blogs py-10">
+    <div class="hero bg-gray-100 py-10 ">
       <div class="container">
         <div class="flex items-center flex-wrap">
           <div
