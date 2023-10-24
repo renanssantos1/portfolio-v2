@@ -1,4 +1,16 @@
 <script lang="ts" setup>
+
+interface BlogItem {
+  id: number
+  description: string 
+  slug: string 
+  tag_list?: string[]
+  cover_image?: string
+}
+
+const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=nataliedeweerd')
+
+
 </script>
 <template>
   <section class="blogs py-10">
@@ -34,11 +46,12 @@
     <!-- Blog Grid Items -->
     <div class="container py-10">
       <div class="grid sm:grid-cols-3 gap-5">
-        <BlogCard v-for="i in 9" :key="i" 
-          :title="'How to create your own Heroku alternative on DigitalOcean'"
-          :slug="'blog-1'"
-          :image="'https://res.cloudinary.com/jahiddev/images/f_auto,q_auto/v1662727437/heroku-alternative-with-dokku-on-digitalocean-2/heroku-alternative-with-dokku-on-digitalocean-2.png?_i=AA'"
-          :excerpt="'I was checking my mail on 25th August 2022, and then suddenly, I saw an email announcement from Heroku. I thought it might be some weekly newsletter, then later found ou'"
+        <BlogCard v-for="item in data" :key="item.id" 
+          :title="item.title"
+          :slug="item.slug"
+          :id="item.id"
+          :image="item.cover_image"
+          :description="item.description"
         />
       </div>
     </div>
