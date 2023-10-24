@@ -3,7 +3,7 @@
 interface BlogItem {
   id: number
   description: string 
-  slug: string 
+  url: string 
   tag_list: string[]
 }
 
@@ -18,7 +18,7 @@ console.log(data)
     <div class="grid sm:grid-cols-3 gap-5">
         <BlogCard v-for="item in data" :key="item.id" 
           :title="item.title"
-          :slug="item.slug"
+          :url="item.url"
           :id="item.id"
           :image="item.cover_image"
           :description="item.description"

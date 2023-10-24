@@ -3,7 +3,7 @@ defineProps<{
   image?: string;
   title: string;
   description?: string;
-  slug: string;
+  url:  string
   created_at?: string
   id: number
 }>();
@@ -24,9 +24,10 @@ defineProps<{
     <div class="p-5">
       <h3 class="text-xl font-semibold mb-3">{{ title }}</h3>
       <p v-if="description" class="text-sm mb-3">{{ description }}</p>
-      <nuxt-link
+      <a
         class="border-b-2 border-primary-500 inline-flex items-center"
-        :to="`/blog/${slug}`"
+        :href="`${url}`"
+        target="_blank"
         >Leia mais
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +43,7 @@ defineProps<{
             d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
           ></path>
         </svg>
-      </nuxt-link>
+      </a>
     </div>
   </div>
 </template>
