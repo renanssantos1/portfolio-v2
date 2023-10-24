@@ -8,7 +8,7 @@ interface BlogItem {
   cover_image?: string
 }
 
-const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=nataliedeweerd')
+const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=j471n')
 
 
 </script>
