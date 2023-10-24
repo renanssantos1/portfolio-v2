@@ -36,7 +36,7 @@
       <div class="grid sm:grid-cols-3 gap-5">
         <BlogCard v-for="i in 9" :key="i" 
           :title="'How to create your own Heroku alternative on DigitalOcean'"
-          :slug="blog-1"
+          :slug="'blog-1'"
           :image="'https://res.cloudinary.com/jahiddev/images/f_auto,q_auto/v1662727437/heroku-alternative-with-dokku-on-digitalocean-2/heroku-alternative-with-dokku-on-digitalocean-2.png?_i=AA'"
           :excerpt="'I was checking my mail on 25th August 2022, and then suddenly, I saw an email announcement from Heroku. I thought it might be some weekly newsletter, then later found ou'"
         />
