@@ -14,39 +14,49 @@ const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?usernam
 </script>
 <template>
   <section class="blogs py-10">
-    <div class="hero bg-gray-100 py-10 ">
-      <div class="container">
-        <div class="flex items-center flex-wrap">
-          <div
-            class="avatar relative h-[200px] w-[200px] rounded overflow-hidden mr-10 mb-5 sm:mb-0 shadow-xl"
-          >
-            <img
-              src="/_nuxt/elon.c4da2aad.png"
-              alt="Elon Musk"
-              class="absolute w-full h-full object-cover"
-            />
+    <BlogProfile />
+
+
+    <div class="container py-10">
+      <div class="grid md:grid-cols-3 gap-5 lg:gap-10" >
+        <div class="md:col-span-1 border p-5 rounded-3xl transition-all duration-300 bg-gray-100 dark:border-white/10 dark:bg-white/5" >
+          <div class="rounded-xl inline-flex p-2 mb-4 bg-black/10 dark:bg-white/10" >
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hover:text-primary-600 icon" style="" width="40px" height="40px" viewBox="0 0 21 21" ><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.5h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2zm1 12h4"></path></svg>
           </div>
-          <div>
-            <h1 class="hero__title">Hi, I am Elon</h1>
-            <p class="mt-3 mb-5">
-              I built SpaceX, acquired Tesla, Twitter. <br />In my free time i
-              sh*t post on twitter.
-            </p>
-            <a
-              href="https://twitter.com/jahiddev"
-              class="bg-primary-500 hover:bg-primary-600 py-2 px-4 rounded text-white inline-flex items-center gap-2"
-              >
-              Let's Connect</a
-            >
+          <h3 class="font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aplicativo web</font></font></h3>
+          <p class="mt-2" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aplicativos web personalizados para atender às suas necessidades comerciais exclusivas.</font></font></p>
+        </div>
+
+        <div class="md:col-span-1 border p-5 rounded-3xl transition-all duration-300 bg-gray-100 dark:border-white/10 dark:bg-white/5" >
+          <div class="rounded-xl inline-flex p-2 mb-4 bg-black/10 dark:bg-white/10" >
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hover:text-primary-600 icon" data-v-44312f6c="" style="" width="40px" height="40px" viewBox="0 0 21 21" ><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m12.5 3.5l-4 14m-2-5l-4-4l4-4m8 12l4-4l-4-4"></path></svg> 
           </div>
+          <h3 class="font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aplicativo moveis</font></font></h3>
+          <p class="mt-2" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aplicativos móveis bonitos e funcionais para plataformas iOS e Android.</font></font></p>
+        </div>
+
+        <div class="md:col-span-1 border p-5 rounded-3xl transition-all duration-300 bg-gray-100 dark:border-white/10 dark:bg-white/5" >
+          <div class="rounded-xl inline-flex p-2 mb-4 bg-black/10 dark:bg-white/10" >
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hover:text-primary-600 icon" data-v-44312f6c="" style="" width="40px" height="40px" viewBox="0 0 21 21" ><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.5 18.5h4M10.5 5a4.5 4.5 0 0 1 2.001 8.532l-.001.968a2 2 0 1 1-4 0v-.968A4.5 4.5 0 0 1 10.5 5z"></path></svg>
+          </div>
+          <h3 class="font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">estudante cloud</font></font></h3>
+          <p class="mt-2" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Indo para o próximo nível 🚀, com Docker, Kubernets, Terraform e AWS.</font></font></p>
         </div>
       </div>
     </div>
 
     <!-- Blog Grid Items -->
     <div class="container py-10">
+      <div class="section-heading heading-spacing flex items-center md:justify-between md:items-end flex-col md:flex-row gap-5 mb-5">
+       <h2 class="md:w-1/2 text-center md:text-left">Gosto de escrever um pouco<br><span class="lg:text-primary-500 text-base font-normal">Oque eu aprendo eu compartilho!</span></h2>
+        <div>
+            <a href="/blog" class="btn btn-default inline-flex items-center group"><span>Ver tudo</span>👉</a>
+        </div>
+     </div>
+
+
       <div class="grid sm:grid-cols-3 gap-5">
-        <BlogCard v-for="item in data" :key="item.id" 
+        <BlogCard v-for="item in data.slice(0, 6)" :key="item.id" 
           :title="item.title"
           :url="item.url"
           :id="item.id"

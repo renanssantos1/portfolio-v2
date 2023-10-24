@@ -8,14 +8,14 @@ interface BlogItem {
 }
 
 const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=j471n')
-
-console.log(data)
-
   
 </script>
 <template>
-  <section class="container blog py-10 sm:py-16">
-    <div class="grid sm:grid-cols-3 gap-5">
+  <section class="py-10" >
+    <BlogProfile />
+
+    <div class="container blog py-10 sm:py-16">
+         <div class="grid sm:grid-cols-3 gap-5">
         <BlogCard v-for="item in data" :key="item.id" 
           :title="item.title"
           :url="item.url"
@@ -24,5 +24,8 @@ console.log(data)
           :description="item.description"
         />
       </div>
+    </div>
+
+   
   </section>
 </template>
