@@ -7,7 +7,7 @@ interface BlogItem {
   tag_list: string[]
 }
 
-const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=nataliedeweerd')
+const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=j471n')
 
 console.log(data)
 
@@ -20,7 +20,7 @@ console.log(data)
           :title="item.title"
           :slug="item.slug"
           :id="item.id"
-          :image="'https://res.cloudinary.com/jahiddev/images/f_auto,q_auto/v1662727437/heroku-alternative-with-dokku-on-digitalocean-2/heroku-alternative-with-dokku-on-digitalocean-2.png?_i=AA'"
+          :image="item.cover_image"
           :description="item.description"
         />
       </div>
