@@ -2,8 +2,10 @@
 defineProps<{
   image: string;
   title: string;
-  excerpt?: string;
+  description?: string;
   slug: string;
+  created_at?: string
+  id: number
 }>();
 </script>
 
@@ -11,9 +13,8 @@ defineProps<{
 <template>
   <div class="col-span-1 shadow-lg">
     <!-- Blog image -->
-    <div class="h-[180px] w-full relative overflow-hidden">
+    <div  v-if="image" class="h-[180px] w-full relative overflow-hidden">
       <img
-        v-if="image"
         class="w-full h-full absolute object-cover"
         :src="image"
         alt="Blog thumb"
@@ -22,7 +23,7 @@ defineProps<{
     <!-- Blog contents -->
     <div class="p-5">
       <h3 class="text-xl font-semibold mb-3">{{ title }}</h3>
-      <p v-if="excerpt" class="text-sm mb-3">{{ excerpt }}</p>
+      <p v-if="description" class="text-sm mb-3">{{ description }}</p>
       <nuxt-link
         class="border-b-2 border-primary-500 inline-flex items-center"
         :to="`/blog/${slug}`"
