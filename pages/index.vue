@@ -14,7 +14,7 @@ useHead({
 });
 
 
-const { data } = await useDevToApi().getPosts('j471n')
+const { data } = await useDevToApi().getPosts('renanssantos1')
 
 
 </script>

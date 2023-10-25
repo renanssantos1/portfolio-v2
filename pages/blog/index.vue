@@ -12,7 +12,7 @@ useHead({
   titleTemplate: "%s - Software Engineer",
 });
 
-const { data } = await useDevToApi().getPosts("j471n");
+const { data } = await useDevToApi().getPosts("renanssantos1");
 </script>
 <template>
   <section class="md:py-10">
