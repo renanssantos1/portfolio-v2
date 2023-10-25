@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build .
+  - docker build -t renanssantos/nuxt-app -f Dockerfile .
 
 env:
   - CI=true
