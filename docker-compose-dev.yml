@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: portfolio-frontend
+    container_name: portfolio-frontend
+    command: npm run dev
+    volumes:
+      - /app/.nuxt
+      - /app/_nuxt
+      - /app/node_modules
+      - .:/app
+    ports:
+      - 3000:3000
+      - 24678:24678
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    image: portfolio-nginx
+    container_name: portfolio-nginx  
+    ports:
+      - "3050:80"
+    depends_on:
+      - client      
