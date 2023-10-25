@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
   runtimeConfig: {
     public: {
-      wpUri: process.env.WP_URI,
+      devToUri: process.env.DEVTO_URI,
     },
   },
   

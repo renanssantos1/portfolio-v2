@@ -1,22 +1,28 @@
 <script lang="ts" setup>
+import useDevToApi from "~~/composables/useDevToApi";
 
-interface BlogItem {
-  id: number
-  description: string 
-  url: string 
-  tag_list: string[]
-}
+useHead({
+  title: "Blog",
+  meta: [
+    {
+      name: "Sinta-se avontade para ler um pouco do qe escrevo.",
+      content: "Blog",
+    },
+  ],
+  titleTemplate: "%s - Software Engineer",
+});
 
-const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=j471n')
-  
+const { data } = await useDevToApi().getPosts("j471n");
 </script>
 <template>
-  <section class="py-10" >
+  <section class="md:py-10">
     <BlogProfile />
 
     <div class="container blog py-10 sm:py-16">
-         <div class="grid sm:grid-cols-3 gap-5">
-        <BlogCard v-for="item in data" :key="item.id" 
+      <div class="grid sm:grid-cols-3 gap-5">
+        <BlogCard
+          v-for="item in data"
+          :key="item.id"
           :title="item.title"
           :url="item.url"
           :id="item.id"
@@ -25,7 +31,5 @@ const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?usernam
         />
       </div>
     </div>
-
-   
   </section>
 </template>

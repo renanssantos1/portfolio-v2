@@ -1,19 +1,25 @@
 <script lang="ts" setup>
 
-interface BlogItem {
-  id: number
-  description: string 
-  url: string 
-  tag_list?: string[]
-  cover_image?: string
-}
+import useDevToApi from "~~/composables/useDevToApi"
 
-const { data } = await useFetch<BlogItem[]>('https://dev.to/api/articles?username=j471n')
+useHead({
+  title: "Home",
+  meta: [
+    {
+      name: "Hello, I'm a Software Engineer from Brazil, coding to help companies and people grow.",
+      content: "Home",
+    },
+  ],
+  titleTemplate: "%s - Software Engineer",
+});
+
+
+const { data } = await useDevToApi().getPosts('j471n')
 
 
 </script>
 <template>
-  <section class="blogs py-10">
+  <section class="blogs md:py-10">
     <BlogProfile />
 
 
