@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const showMenu = ref(true)
 
 </script>
 <template>
@@ -20,18 +21,18 @@
             </svg>
           </a>
         </div>
-        <button class="toggle-button lg:hidden">
+        <button @click="showMenu = !showMenu" class="toggle-button lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="icon" width="24px" height="24px" viewBox="0 0 24 24">
             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
           </svg>
         </button>
       </div>
-      <div class="navbar-nav hidden lg:block">
+      <div :class="showMenu ? 'navbar-nav block' : 'navbar-nav hidden lg:block'">
         <ul class="flex items-center gap-5">
           <li><a title="Blog" href="/blog" class="nav-link font-bold lowercase">Blog</a></li>
           <li><a title="Projetos" href="/portfolio" class="nav-link font-bold lowercase">Projetos</a></li>
           <li><a title="Contato" href="/contact" class="nav-link font-bold lowercase">Contato</a></li>
-          <li class="leading-none">
+          <!-- <li class="leading-none">
             <button type="button" class="relative group">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="icon group-hover:rotate-180 transition-all duration-300 ease-in-out" width="20px" height="20px" viewBox="0 0 24 24" >
@@ -62,7 +63,7 @@
                 </ul>
               </div>
             </button>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

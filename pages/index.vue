@@ -49,24 +49,24 @@ const { data } = await useDevToApi().getPosts('j471n')
           <div class="rounded-xl inline-flex p-2 mb-4 bg-black/10 dark:bg-white/10" >
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hover:text-primary-600 icon" style="" width="40px" height="40px" viewBox="0 0 21 21" ><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.5h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2zm1 12h4"></path></svg>
           </div>
-          <h3 class="font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aplicativo web</font></font></h3>
-          <p class="mt-2" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aplicativos web personalizados para atender às suas necessidades comerciais exclusivas.</font></font></p>
+          <h3 class="font-bold">aplicativo web</h3>
+          <p class="mt-2" >Aplicativos web personalizados para atender às suas necessidades comerciais exclusivas.</p>
         </div>
 
         <div class="md:col-span-1 border p-5 rounded-3xl transition-all duration-300 bg-gray-100 dark:border-white/10 dark:bg-white/5" >
           <div class="rounded-xl inline-flex p-2 mb-4 bg-black/10 dark:bg-white/10" >
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hover:text-primary-600 icon" data-v-44312f6c="" style="" width="40px" height="40px" viewBox="0 0 21 21" ><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m12.5 3.5l-4 14m-2-5l-4-4l4-4m8 12l4-4l-4-4"></path></svg> 
           </div>
-          <h3 class="font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aplicativo moveis</font></font></h3>
-          <p class="mt-2" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aplicativos móveis bonitos e funcionais para plataformas iOS e Android.</font></font></p>
+          <h3 class="font-bold">aplicativo moveis</h3>
+          <p class="mt-2" >Aplicativos móveis bonitos e funcionais para plataformas iOS e Android.</p>
         </div>
 
         <div class="md:col-span-1 border p-5 rounded-3xl transition-all duration-300 bg-gray-100 dark:border-white/10 dark:bg-white/5" >
           <div class="rounded-xl inline-flex p-2 mb-4 bg-black/10 dark:bg-white/10" >
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hover:text-primary-600 icon" data-v-44312f6c="" style="" width="40px" height="40px" viewBox="0 0 21 21" ><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.5 18.5h4M10.5 5a4.5 4.5 0 0 1 2.001 8.532l-.001.968a2 2 0 1 1-4 0v-.968A4.5 4.5 0 0 1 10.5 5z"></path></svg>
           </div>
-          <h3 class="font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">estudante cloud</font></font></h3>
-          <p class="mt-2" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Indo para o próximo nível 🚀, com Docker, Kubernets, Terraform e AWS.</font></font></p>
+          <h3 class="font-bold">estudante cloud</h3>
+          <p class="mt-2" >Indo para o próximo nível 🚀, com Docker, Kubernets, Terraform e AWS.</p>
         </div>
       </div>
     </div>

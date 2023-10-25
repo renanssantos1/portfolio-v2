@@ -17,7 +17,7 @@
         <div>
           <h1 class="hero__title">Hello 👋🏻 👋🏻</h1>
           <p class="mt-3 mb-5">
-            I'm a software engineer, passionate about the cloud <br />
+            I'm a software engineer, passionate about the cloud 
             and Frontend world!
           </p>
           <a
