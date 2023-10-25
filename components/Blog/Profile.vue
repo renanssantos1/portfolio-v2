@@ -23,7 +23,7 @@
           <a
             target="_blank"
             href="https://api.whatsapp.com/send?phone=5511966052313&text=Ola%20:)"
-            class="bg-primary-500 hover:bg-primary-600 py-2 px-4 rounded text-white inline-flex items-center gap-2 font-bold lowercase"
+            class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded text-white inline-flex items-center gap-2 font-bold lowercase"
           >
             Fale Comigo</a
           >

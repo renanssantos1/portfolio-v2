@@ -23,6 +23,26 @@ const { data } = await useDevToApi().getPosts('j471n')
     <BlogProfile />
 
 
+    <div  class="container py-8">
+      <h2 class="text-xl text-gray-700 mb-7">Um pouco sobre mim...</h2>
+      <p class="my-2 text-gray-600 text-sm">
+        Olá! Sou um engenheiro de software apaixonado por transformar ideias em soluções digitais. Minha jornada é guiada 
+        pelas tecnologias que moldam o mundo digital, e meu objetivo é criar experiências incríveis.
+      </p>
+      <p class="my-2 text-gray-600 text-sm">
+        Minha caixa de ferramentas inclui Node.js, PHP, Java, JavaScript, React Native, Angular e Docker. Adoro ambientes de testes e arquiteturas complexas <span class="font-bold">(oque estranho é interessante)</span>, do back-end ao front-end. 
+        Gosto de mergulhar no shell para automatizar tarefas e melhorar a eficiência.
+      </p>
+      <p class="my-2 text-gray-600 text-sm">
+        Além disso, estou me aprofundando no mundo <span class="font-bold">DevOps</span>, explorando Docker, Kubernetes, Terraform e AWS. Estou comprometido em trazer uma abordagem de infraestrutura como código para meu trabalho, 
+        tornando nossas operações mais eficientes e escaláveis.
+      </p>
+      <p class="my-2 text-gray-600 text-sm">
+        Em um futuro próximo, planejo obter minha primeira certificação AWS para aprimorar ainda mais minha expertise na nuvem.
+      </p>
+      <p class="my-2 text-gray-600 text-sm">Vamos criar algo incrível juntos!</p>
+    </div>
+
     <div class="container py-10">
       <div class="grid md:grid-cols-3 gap-5 lg:gap-10" >
         <div class="md:col-span-1 border p-5 rounded-3xl transition-all duration-300 bg-gray-100 dark:border-white/10 dark:bg-white/5" >
