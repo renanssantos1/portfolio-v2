@@ -1,29 +1,20 @@
-ARG NODE_VERSION=18.14.2
+FROM node:18-alpine as builder
 
-FROM node:${NODE_VERSION}-slim as base
+WORKDIR /app
 
-ARG PORT=3000
+COPY package*.json .
 
-ENV NODE_ENV=production
+RUN npm install
 
-WORKDIR /src
+COPY . .
 
-# Build
-FROM base as build
+EXPOSE 3000
+EXPOSE 24678
 
-COPY --link package.json package-lock.json .
-RUN npm install --production=false
+RUN ["npm", "run", "build"]
 
-COPY --link . .
+ENV PATH ./node_modules/.bin/:$PATH
 
-RUN npm run build
-RUN npm prune
 
-# Run
-FROM base
-
-ENV PORT=$PORT
-
-COPY --from=build /src/.output /src/.output
-
-CMD [ "node", ".output/server/index.mjs" ]
+FROM nginx
+COPY --from=builder /src/.output /src/.output
