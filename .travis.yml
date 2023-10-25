@@ -1,17 +1,19 @@
-dist: bionic
-language: node_js
-node_js: 
-  - 18
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t renanssantos/nuxt-app -f Dockerfile.dev .
 
 env:
   - CI=true
   - DEVTO_URI=https://dev.to/api
 
-before_install: npm config set progress=false && npm i -g npm@latest --no-audit  
-
 before_deploy:
   - npm install netlify-cli -g
   - npm run build
+
+
 
 deploy:
   provider: script
