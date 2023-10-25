@@ -1,6 +1,7 @@
 dist: bionic
 language: node_js
-node_js: "stable"
+node_js: 
+  - 18
 
 env:
   - CI=true
