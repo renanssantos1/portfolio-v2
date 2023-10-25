@@ -1,0 +1,21 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t renansantos01/nuxtapp:v1 .
+
+env:
+  - CI=true
+  - DEVTO_URI=https://dev.to/api
+
+before_deploy:
+  - npm install netlify-cli -g
+  - npm run build
+
+deploy:
+  provider: script
+  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./build
+  edge: true
+  on:
+    branch: master
