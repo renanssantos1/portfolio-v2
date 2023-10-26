@@ -37,6 +37,6 @@ npm run dev # or yarn dev
 ## Deployment
 
 O ambiente esta configurado para ser hospedado no Netlify, portanto somente la junto ao Travis é possivel fazer as 
-configurações 
+configurações.
 
 [Url](https://renansantos.dev).
