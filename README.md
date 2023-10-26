@@ -1,24 +1,20 @@
-# Nuxt 3 WP Blog
+# Nuxt 3 Renan Santos Portfolio
 
-We are going to build a Nuxt3 blog with WordPress as a backend. We will use the WordPress REST API to fetch the data from WordPress and display it on our Nuxt3 blog.
+Projeto desenvolvido para exibir um portfolio web.
 
-[Full Video Link](https://youtu.be/fY2sfrV2zho)
 
-## Topics
+## Tecnologias
 
-- [x] Brief introduction to Nuxt3
-- [x] Brief introduction to WordPress Rest API
-- [x] Create a Nuxt3 project
-- [x] Create a WordPress project
-- [x] Nuxt3 Directory Structure
-- [x] Designing the Home Page
-- [x] Designing the Post Page
-- [x] Designing the Category Page
-- [x] Creating Reusable Components
-- [x] Making the code reusable using composables
+- [x] Nuxt 3
+- [x] Vite
+- [x] Jest/Test
+- [x] Nginx
+- [x] Docker
+- [x] Travis Ci
+- [x] Shell Script
 - [x] Deploying to Vercel
 
-## Usage
+## Como usar
 
 Copy the `.env.example` file to `.env` and fill the values.
 
@@ -40,21 +36,7 @@ npm run dev # or yarn dev
 
 ## Deployment
 
-Vercel deployment is already covered in the video.
+O ambiente esta configurado para ser hospedado no Netlify, portanto somente la junto ao Travis é possivel fazer as 
+configurações 
 
-For digital ocean deployment, follow the [Digital Ocean Deployment Guide](https://www.youtube.com/watch?v=hANbHC90xug&ab_channel=JahidAnowar).
-
-## Contributions & Issues
-
-Please feel free to raise an issue for suggestions or bugs. You can ,essage me on twitter [@jahidDev](https://twitter.com/jahidDev).
-
-## License
-
-> _The project is released under the WTFPL2 [Do What The F\*ck You Want To Public License](LICENSE)._
-
-<hr>
-
-> [jahid.dev](https://jahid.dev) &nbsp;&middot;&nbsp;
-> YouTube [@jahidanowar](https://jahid.dev/go/yt) &nbsp;&middot;&nbsp;
-> Twitter [@jahidDev](https://jahid.dev/go/tt) &nbsp;&middot;&nbsp;
-> Instagram [@jahidDev](https://jahid.dev/go/ig)
+[Url](https://renansantos.dev).
